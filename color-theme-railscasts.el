@@ -5,6 +5,7 @@
 ;; Copyright (C) 2009 Oleg Shaldybin <oleg.shaldybin@gmail.com>
 
 ;; Author: Oleg Shaldybin
+;; Adapted-By: Yesudeep Mangalapilly
 ;; Keywords: railscasts color theme
 ;; URL: https://github.com/olegshaldybin/color-theme-railscasts
 ;; Version: 0.0.2
