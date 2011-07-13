@@ -1,15 +1,55 @@
-;; Railscasts color theme for Emacs.
+;;; color-theme-railscasts.el --- Railscasts color theme for GNU Emacs.
+
+;; Inspired by the brilliant Railscasts theme for TextMate
+
+;; Copyright (C) 2009 Oleg Shaldybin <oleg.shaldybin@gmail.com>
+
+;; Author: Oleg Shaldybin
+;; Keywords: railscasts color theme
+;; URL: https://github.com/olegshaldybin/color-theme-railscasts
+;; Version: 0.0.2
+;; Package-Requires: ((color-theme "6.6.1"))
+
+;; This file is NOT a part of GNU Emacs.
+
+;;; License:
+
+;; MIT License
+;; -----------
+;; Permission is hereby granted, free of charge, to any person
+;; obtaining a copy of this software and associated documentation
+;; files (the "Software"), to deal in the Software without
+;; restriction, including without limitation the rights to use,
+;; copy, modify, merge, publish, distribute, sublicense, and/or
+;; sell copies of the Software, and to permit persons to whom the
+;; Software is furnished to do so, subject to the following
+;; conditions:
 ;;
-;; To use add the following to your .emacs file:
+;; The above copyright notice and this permission notice shall
+;; be included in all copies or substantial portions of the
+;; Software.
+;;
+;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+;; EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+;; OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+;; NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+;; HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+;; WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+;; FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+;; OTHER DEALINGS IN THE SOFTWARE.
+
+;;; Usage:
 ;;
 ;; (require 'color-theme)
 ;; (color-theme-initialize)
 ;; (load-file "~/.emacs.d/site-lisp/themes/color-theme-railscasts.el")
 ;; (color-theme-railscasts)
-;;
-;; MIT License Copyright (c) 2009 Oleg Shaldybin <oleg.shaldybin@gmail.com>
-;; Inspired by the brilliant Railscasts theme for TextMate
-;;
+
+;;; Code:
+
+(eval-when-compile
+  (require 'color-theme))
+
 
 (defun color-theme-railscasts ()
   (interactive)
@@ -56,3 +96,11 @@
                                         "black"))))
      (underline ((t (:underline t)))) 
      (minibuffer-prompt ((t (:bold t :foreground "#FF6600")))))))
+
+
+(color-theme-railscasts)
+
+
+(provide 'color-theme-railscasts)
+
+;;; color-theme-railscasts.el ends here
