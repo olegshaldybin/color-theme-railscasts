@@ -2,24 +2,30 @@
 ;;
 ;; To use add the following to your .emacs file:
 ;;
+;; The path in the third line is the path to the railscasts theme .el file.
 ;; (require 'color-theme)
 ;; (color-theme-initialize)
-;; (load-file "~/.emacs.d/site-lisp/themes/color-theme-railscasts.el")
+;; (load-file "~/.emacs.d/site-lisp/themes/color-theme-railscasts.el") 
 ;; (color-theme-railscasts)
 ;;
 ;; MIT License Copyright (c) 2009 Oleg Shaldybin <oleg.shaldybin@gmail.com>
 ;; Inspired by the brilliant Railscasts theme for TextMate
-;;
+;; 
+;; Added modification of a default background. This makes sure that when you run 
+;; Railscasts the background color also syncs with the railscast theme bg color.
 
 (defun color-theme-railscasts ()
   (interactive)
   (color-theme-install
    '(color-theme-railscasts
      ((background-color . "#232323")
+      (border-color . "#232323")
       (background-mode . dark)
-      (cursor-color . "#5A647E")
+      (mouse-color . "sienna1") ; avallark 
+      (cursor-color . "#5A647E") ;avallark
       (foreground-color . "#E6E1DC"))
-     (default ((t (nil))))
+     (default ((t (:background "#232323" :foreground "#F8F8F8")))) ;avallark
+     (blue ((t (:foreground "blue")))) ; avallark
      (bold ((t (:bold t))))
      (bold-italic ((t (:italic t :bold t))))
      (fringe ((t (:background "#232323"))))
